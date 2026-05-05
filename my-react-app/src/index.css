@@ -1,0 +1,28 @@
+:root {
+  --first-bg-color: rgb(2, 2, 50);
+  --second-bg-color: rgb(255, 255, 255);
+  --main-color: yellow;
+}
+html{
+  scroll-behavior: smooth;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(black, rgb(2, 2, 50));
+  color: white;
+  font-family: "Inter", sans-serif;
+
+}
+

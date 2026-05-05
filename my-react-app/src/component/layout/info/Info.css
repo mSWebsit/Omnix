@@ -1,0 +1,38 @@
+.infoSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 60px 10%; 
+    gap: 40px; 
+    background: rgb(10, 10, 50);
+    border-top: 1px solid rgba(36, 36, 96, 1); 
+
+}
+.general{
+    max-width: 300px;
+    flex:1 1 300px;
+}
+.general p{
+    padding-top: 15px;
+    line-height: 20px;
+    color: grey;
+}
+.Stack{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.head{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.body{
+    color: gray;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.body:hover{
+    color:yellow ;
+}

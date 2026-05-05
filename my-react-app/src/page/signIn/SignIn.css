@@ -1,0 +1,82 @@
+.signInContainer {
+    border: 1px solid white;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 30px;
+    box-sizing: border-box;
+}
+
+form {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signInContainer h2 {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.formGroup {
+    position: relative;
+    margin-bottom: 25px; 
+    width: 100%;        
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.formGroup label {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.formGroup input {
+    padding: 24px 12px 8px; 
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    background: transparent; 
+    color: white;           
+}
+
+.formGroup input:focus + label,
+.formGroup input:not(:placeholder-shown) + label {
+    top: 8px;   
+    left: 32px;           
+    transform: translateY(0);
+    font-size: 12px;
+    color: #aaa;           
+}
+
+.signInContainer button {
+    width: calc(100% - 40px); 
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}

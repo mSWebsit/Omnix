@@ -1,0 +1,51 @@
+:root {
+    --main-color: yellow;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    padding: 20px;
+    /*Glass bg*/
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);/* Support for Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    color: white;
+    cursor: pointer;
+}
+
+header a {
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bt a:hover {
+    background-color: rgb(242, 255, 0);
+    color: black;
+}
+
+.bt {
+    display: flex;
+    gap: 20px;
+}
+
+.sign-in {
+    border: 1.5px solid rgb(255, 255, 255, 0.3);
+    color: black;
+    background-color: var(--main-color);
+}
