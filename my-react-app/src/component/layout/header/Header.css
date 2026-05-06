@@ -34,7 +34,7 @@ header a {
     text-decoration: none;
 }
 
-.bt a:hover {
+a:hover:not(.sign-in,.logo){
     background-color: rgb(242, 255, 0);
     color: black;
 }
@@ -48,4 +48,10 @@ header a {
     border: 1.5px solid rgb(255, 255, 255, 0.3);
     color: black;
     background-color: var(--main-color);
+    
+}
+.sign-in:hover{
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
 }

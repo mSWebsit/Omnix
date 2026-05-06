@@ -5,12 +5,12 @@ function Header() {
     return (
         <>
             <header>
-                <Link to='/'><h1>Omnix</h1></Link>
+                <Link className='logo' to='/'><h1>Omnix</h1></Link>
                 <div className='bt'>
                     <Link to='/'>Home</Link>
                     <Link to='/Catalogue'>Catalogue</Link>
                     <a href="#About">About</a>
-                    <Link className='sign-in' to='/signin'>Sign in</Link>
+                    <Link className='sign-in' to='/signin'>Get started</Link>
                 </div>
             </header>
         </>

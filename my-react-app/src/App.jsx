@@ -8,11 +8,27 @@ import Info from './component/layout/info/Info.jsx'
 import Footer from './component/layout/footer/Footer.jsx'
 import Catalogue from './page/workCatalogue/Catalogue.jsx';
 import CustomProject from './page/CustomProject/CustomProject.jsx'
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 const Layout = () => (
   <>
+    <ScrollToTop />
     <Header />
     <Outlet />
+    <Info />
     <Footer />
+    
   </>
 );
 const router = createBrowserRouter([
@@ -26,7 +42,6 @@ const router = createBrowserRouter([
         element: (
           <>
             <Main />
-            <Info />
           </>
         )
       }, {
@@ -34,8 +49,6 @@ const router = createBrowserRouter([
         element: (
           <>
             <Catalogue />
-
-            <Info />
           </>
         )
       }, {
@@ -43,8 +56,6 @@ const router = createBrowserRouter([
         element: (
           <>
             <CustomProject />
-
-            <Info />
           </>
         )
       },
@@ -54,7 +65,12 @@ const router = createBrowserRouter([
   {
     // lone Route 
     path: "/signin",
-    element: <SignIn />
+    element: (
+      <>
+        <Header />
+        <SignIn />
+      </>
+    )
   }
 ]);
 
