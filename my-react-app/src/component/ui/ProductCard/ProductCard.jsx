@@ -3,7 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Zap } from "lucide-react";
 import "./ProductCard.css";
 
-export default function ProductCard({ product }) {
+function ProductCard({ product }) {
+  
+  const CatColor={
+    Web:'blue',
+    Mobile:'lightblue',
+    AI:'red',
+    Automation:'yellow',
+  };
+  const defaultColor= 'white';
+
   const [currentIdx, setCurrentIdx] = useState(0);
 
   let images;
@@ -59,6 +68,21 @@ export default function ProductCard({ product }) {
       </div>
 
       <div className="content-area">
+      <div className="Tags"> 
+          {product.categories?.map((cat) => {
+            const color = CatColor[cat] || defaultColor;
+            return (
+              <span 
+                key={cat} 
+                className="Tag"
+                style={{color: color,borderColor: `${color}40`,backgroundColor: `${color}15`
+                }}
+              >
+                {cat}
+              </span>
+            );
+          })}
+        </div> 
         <h3 className="title">{product.Title}</h3>
         <p className="description">{product.Desc}</p>
         <button className="cta-button">
@@ -68,3 +92,4 @@ export default function ProductCard({ product }) {
     </motion.div>
   );
 }
+export default ProductCard
