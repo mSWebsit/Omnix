@@ -4,14 +4,14 @@ import { ChevronLeft, ChevronRight, Zap } from "lucide-react";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
-  
-  const CatColor={
-    Web:'blue',
-    Mobile:'lightblue',
-    AI:'red',
-    Automation:'yellow',
+
+  const CatColor = {
+    Web: 'blue',
+    Mobile: 'lightblue',
+    AI: 'red',
+    Automation: 'var(--main-color)',
   };
-  const defaultColor= 'white';
+  const defaultColor = 'white';
 
   const [currentIdx, setCurrentIdx] = useState(0);
 
@@ -68,21 +68,22 @@ function ProductCard({ product }) {
       </div>
 
       <div className="content-area">
-      <div className="Tags"> 
+        <div className="Tags">
           {product.categories?.map((cat) => {
             const color = CatColor[cat] || defaultColor;
             return (
-              <span 
-                key={cat} 
+              <span
+                key={cat}
                 className="Tag"
-                style={{color: color,borderColor: `${color}40`,backgroundColor: `${color}15`
+                style={{
+                  color: color, borderColor: `${color}40`, backgroundColor: `${color}15`
                 }}
               >
                 {cat}
               </span>
             );
           })}
-        </div> 
+        </div>
         <h3 className="title">{product.Title}</h3>
         <p className="description">{product.Desc}</p>
         <button className="cta-button">

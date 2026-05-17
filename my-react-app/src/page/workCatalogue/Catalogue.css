@@ -1,4 +1,4 @@
-.catalog-header{
+.catalog-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,52 +12,59 @@
             #000000 100%);
     background-attachment: fixed;
 }
-.catalog_nav_bar{
+
+.catalog_nav_bar {
     margin: 30px 0px;
     display: flex;
     gap: 100px;
-    
+
 }
-.catalog_nav_buttons{
+
+.catalog_nav_buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 17px;
 }
-.catalog_nav_button{
+
+.catalog_nav_button {
     padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 25px;
-    background-color:  rgba(44, 44, 152, 0.3);
+    background-color: rgba(44, 44, 152, 0.3);
     color: white;
     font-size: 17px;
     transition: border-color 0.4s ease;
-    
+
 }
-.catalog_nav_button:hover{
-    border-color: yellow;
-    border: 1px solid yellow;
+
+.catalog_nav_button:hover {
+    border-color: var(--main-color);
+    border: 1px solid var(--main-color);
 }
-.catalog_nav_button.active{
-    background-color: yellow;
+
+.catalog_nav_button.active {
+    background-color: var(--main-color);
     color: black;
 }
-.catalog_sort_dropdown{
+
+.catalog_sort_dropdown {
     padding: 15px 15px;
     width: 200px;
     display: inline-block;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 25px;
-    background-color:  rgba(44, 44, 152, 0.3);
+    background-color: rgba(44, 44, 152, 0.3);
     color: white;
     font-size: 17px;
-    
+
 }
+
 .ProductContainer {
 
     display: flex;

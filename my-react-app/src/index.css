@@ -2,10 +2,22 @@
   --first-bg-color: rgb(2, 2, 50);
   --second-bg-color: rgb(255, 255, 255);
   --main-color: yellow;
+  --sub-color:gray;
+  --bg-deep: #02021a;
+  --bg-glow: #0a0a40;
+  --text-muted: #a0a0c0;
+  --bg-dark: #020420;
+  --card-bg: #05071d;
+  --input-bg: #0d113d;
+  --border-color: #1e265a;
+  --text-muted: #8e96c4;
+  --font-main: 'Inter', system-ui, sans-serif;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 button,
 input,
 select,
@@ -25,4 +37,3 @@ body {
   font-family: "Inter", sans-serif;
 
 }
-

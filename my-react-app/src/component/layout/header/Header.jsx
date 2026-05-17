@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom'
+import {NavLink, Link } from 'react-router-dom'
 import './Header.css'
 
 function Header() {
     return (
         <>
             <header>
-                <Link className='logo' to='/'><h1>Omnix</h1></Link>
+                <h1 className='logo'>Omnix</h1>
                 <div className='bt'>
-                    <Link to='/'>Home</Link>
-                    <Link to='/Catalogue'>Catalogue</Link>
-                    <a href="#About">About</a>
-                    <Link className='sign-in' to='/signin'>Get started</Link>
+                    <NavLink className='header_nav' to='/'>Home</NavLink>
+                    <NavLink className='header_nav' to='/Catalogue'>Catalogue</NavLink>
+                    <a className='header_nav' href="#About">About</a>
                 </div>
             </header>
         </>
