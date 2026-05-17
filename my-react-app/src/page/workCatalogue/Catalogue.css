@@ -62,9 +62,12 @@
     background-color: rgba(44, 44, 152, 0.3);
     color: white;
     font-size: 17px;
-
+    color-scheme: dark;
 }
-
+select option {
+    background: #030339;
+    opacity: 0.3;
+  }
 .ProductContainer {
 
     display: flex;

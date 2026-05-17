@@ -36,7 +36,6 @@
 
 .Title {
     font-size: clamp(36px, 8vw, 64px);
-    /* Scales font for mobile automatically */
     font-weight: 1000;
     max-width: 900px;
     line-height: 1.1;
@@ -54,7 +53,6 @@
     line-height: 1.6;
 }
 
-/* 3. Hero Buttons */
 .buttons {
     display: flex;
     align-items: center;
@@ -97,13 +95,14 @@
 
 .view:hover {
     transform: translateY(-3px);
+    background-color: var(--main-color);
+    color: black;
     box-shadow: 0 10px 20px rgba(229, 255, 0, 0.2);
 }
 
-/* 4. Services Section (Second Page) */
+/* Second Page */
 .SecPage {
     padding: 80px 20px;
-    /* Removed the solid background color to let the global gradient shine through */
     background-color: transparent;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -129,7 +128,6 @@
     max-width: 600px;
 }
 
-/* 5. Product/Card Container Grid */
 .exp-container,
 .ProductContainer {
     display: grid;
@@ -140,7 +138,6 @@
     margin: 0 auto;
 }
 
-/* 6. The Product Card itself */
 .product-card,
 .SliderCard {
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -172,7 +169,6 @@
     object-fit: cover;
 }
 
-/* 7. Card Content */
 .content-area {
     padding: 20px 25px;
     display: flex;
@@ -196,7 +192,6 @@
     flex-grow: 1;
 }
 
-/* 8. CTA Button & Hover */
 .cta-button {
     width: 100%;
     height: 50px;
@@ -219,7 +214,6 @@
     color: black !important;
 }
 
-/* 9. Navigation & Price Tags */
 .price-tag,
 .Price {
     position: absolute;
@@ -267,7 +261,6 @@
     color: black;
 }
 
-/* 10. Responsive Fixes */
 @media (max-width: 768px) {
     .buttons {
         flex-direction: column;

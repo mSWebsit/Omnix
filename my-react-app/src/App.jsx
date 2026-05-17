@@ -1,8 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import SignIn from './page/signIn/SignIn.jsx'
 import Header from './component/layout/header/Header.jsx'
-// import Hero from './component/sections/hero/Hero.jsx'
-// import Services from './component/sections/services/Services.jsx'
 import Main from './page/mainPage/main.jsx'
 import Info from './component/layout/info/Info.jsx'
 import Footer from './component/layout/footer/Footer.jsx'
