@@ -7,16 +7,16 @@ function Info() {
                 <h3>Omnix</h3>
                 <p>Empowering businesses through innovative technology solutions. From concept to code, we deliver excellence.</p>
                 <div>
-                    <a href="" target="_blank" and rel="noopener noreferrer">
+                    <a href="" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className='social_media'/>
                     </a>
-                    <a href="" target="_blank" and rel="noopener noreferrer">
+                    <a href="" target="_blank" rel="noopener noreferrer">
                         <FaFacebook className='social_media'/>
                     </a>
-                    <a href="" target="_blank" and rel="noopener noreferrer">
+                    <a href="" target="_blank" rel="noopener noreferrer">
                         <FaInstagram className='social_media'/>
                     </a>
-                    <a href="" target="_blank" and rel="noopener noreferrer">
+                    <a href="" target="_blank" rel="noopener noreferrer">
                         <FaWhatsapp className='social_media'/>
                     </a>
                 </div>

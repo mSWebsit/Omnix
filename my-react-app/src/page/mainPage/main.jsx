@@ -37,7 +37,7 @@ function Main() {
                     and enterprise software solutions that drive growth and innovation.</p>
                 <div className='buttons'>
                     <Link className='start' to="/CustomProject">Start Your Project <ChevronRight /></Link>
-                    <Link className='view' to="/Catalogue">View our Work</Link>
+                    <Link className='view' to="/Catalog">View our Work</Link>
 
                 </div>
             </div>

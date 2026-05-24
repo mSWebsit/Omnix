@@ -2,13 +2,15 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import SignIn from './page/signIn/SignIn.jsx'
 import Header from './component/layout/header/Header.jsx'
 import Main from './page/mainPage/main.jsx'
+import CustomProject from './page/CustomProject/CustomProject.jsx'
 import Info from './component/layout/info/Info.jsx'
 import Footer from './component/layout/footer/Footer.jsx'
-import Catalogue from './page/workCatalogue/Catalogue.jsx';
-import CustomProject from './page/CustomProject/CustomProject.jsx'
+import Catalog from './page/workCatalog/Catalog.jsx';
+import Product from './page/Product/Product.jsx';
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { div } from 'motion/react-client';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -26,7 +28,7 @@ const Layout = () => (
     <Outlet />
     <Info />
     <Footer />
-    
+
   </>
 );
 const router = createBrowserRouter([
@@ -43,10 +45,10 @@ const router = createBrowserRouter([
           </>
         )
       }, {
-        path: "Catalogue",
+        path: "Catalog",
         element: (
           <>
-            <Catalogue />
+            <Catalog />
           </>
         )
       }, {
@@ -61,15 +63,16 @@ const router = createBrowserRouter([
     ]
   },
   {
-    // lone Route 
-    path: "/signin",
+    path: "Catalog/:productId",
     element: (
       <>
+        <ScrollToTop />
         <Header />
-        <SignIn />
+        <Outlet />
+        <Product />
       </>
     )
-  }
+  },
 ]);
 
 function App() {

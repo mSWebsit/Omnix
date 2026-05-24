@@ -1,0 +1,122 @@
+.go_back_btn{
+    display: flex;
+    color: var(--sub-color);
+    background-color: transparent;
+    border: none;
+    margin: 50px 10px 30px 10px;
+}
+.go_back_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size:18px;
+    
+}
+.go_back_icon,
+.go_back_text {
+    color: var(--sub-color);
+    transition: color 0.15s ease-in-out;
+}
+.go_back_btn:hover .go_back_icon,
+.go_back_btn:hover .go_back_text {
+    color: var(--main-color);
+}
+
+
+.product_container {
+    display: flex;
+    flex-direction: row; 
+    gap: 40px;         
+    width: 100%;
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 0 20px;
+}
+
+
+.product_images_area {
+    flex: 1;            
+    max-width: 550px;
+   
+}
+.product_images_area img{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+.image-container{
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.product_main_area {
+    flex: 1;           
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    right: 0;
+    margin-left: 20px;
+
+}
+.product_title,
+.product_price,
+.product_desc{
+    
+}
+.product_title{
+    font-size: 70px;
+    padding-bottom: 10px ;
+}
+.product_price{
+    font-size: 40px;
+    padding-bottom: 50px;
+    color: var(--main-color);
+}
+.product_desc{
+    font-size:20px ;
+    color: var(--sub-color);
+}
+
+
+.buy_btn,
+.req_info{
+    text-decoration: none;
+    padding: 18px 36px;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.buy_btn{
+    color: black;
+    background-color: var(--main-color);
+}
+.buy_btn:hover {
+    transform: translateY(-3px);
+    background-color: white;
+    color: #02021a;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.req_info{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.req_info:hover {
+    transform: translateY(-3px);
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 10px 20px rgba(229, 255, 0, 0.2);
+}
