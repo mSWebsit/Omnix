@@ -10,7 +10,7 @@ import Product from './page/Product/Product.jsx';
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { div } from 'motion/react-client';
+
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -73,7 +73,9 @@ const router = createBrowserRouter([
       </>
     )
   },
-]);
+],{
+  basename: "/Omnix",
+});
 
 function App() {
   // 3. Render the RouterProvider instead of the old list
