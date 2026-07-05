@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"; // 1. Import useParams
 import { motion, AnimatePresence } from "framer-motion";
 import './Product.css';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight,Zap } from 'lucide-react';
 import Data from '../../data/data.jsx';
 
 function Product() {
@@ -43,7 +43,7 @@ function Product() {
 
     // Within Product.jsx — Update your layout structure:
     return (
-        <div>
+        <div className="produtc-container">
             <button className='go_back_btn'>
                 <ChevronLeft className='go_back_icon' />
                 <Link className='go_back_text' to='/Catalog'>Back to catalog</Link>
@@ -95,8 +95,8 @@ function Product() {
                         
                     </div>
                     <div className="buttons">
-                        <button className="buy_btn">Buy Now</button>
-                        <button className="req_info">Request Information</button>
+                        <button className="buy_btn">Purchase now</button>
+                        <button className="demo-button">Try Demo <Zap size={18} /></button>
                     </div>
                 </div>
             </div>

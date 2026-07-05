@@ -1,3 +1,6 @@
+.produtc-container{
+    padding-bottom: 50px;
+}
 .go_back_btn{
     display: flex;
     color: var(--sub-color);
@@ -97,6 +100,19 @@
 }
 
 .buy_btn{
+    width: 50%;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
     color: black;
     background-color: var(--main-color);
 }
@@ -107,14 +123,25 @@
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-.req_info{
-    color: white;
+.demo-button{
+    width: 50%;
+    height: 48px;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.req_info:hover {
+.demo-button:hover {
     transform: translateY(-3px);
     background-color: var(--main-color);
     color: black;

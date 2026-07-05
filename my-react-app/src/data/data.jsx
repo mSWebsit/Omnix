@@ -17,7 +17,7 @@ const Data = [
         Title: "POS",
         Price: 300.00,
         Desc: "POS-Invintory-Tables Mangment-Sales",
-        categories: ['Web','Mobile']
+        categories: ['Web', 'Mobile']
     },
     {
         key: 3, ImageSrc:
@@ -27,7 +27,7 @@ const Data = [
         Title: "POS",
         Price: 700.00,
         Desc: "POS-Invintory-Tables Mangment-Sales",
-        categories: ['Web','AI']
+        categories: ['Web', 'AI']
     },
     {
         key: 4, ImageSrc:

@@ -31,29 +31,38 @@ function Main() {
     return (
         <div className='container'>
             <div className='FirstPage'>
-                <div className="badge">Next-Gen Technology Partner</div>
-                <h1 className="Title">We Build the <span className='highlight'>Digital Future</span> of Your Business.</h1>
-                <p className="subTitle">Omnix specializes in crafting high-end websites,mobile applications,
-                    and enterprise software solutions that drive growth and innovation.</p>
-                <div className='buttons'>
+
+                <div className="badge animate-blur delay-1">
+                    Next-Gen Technology Partner
+                </div>
+
+                <h1 className="Title">
+                    <span className="line animate-blur delay-2">We Build the</span>
+                    <span className="line animate-blur delay-3">
+                        <span className='highlight'> Digital Future </span>
+                    </span>
+                    <span className="line animate-blur delay-4">of Your Business.</span>
+                </h1>
+
+                <p className="subTitle">
+                    <span className="line animate-blur delay-5">Omnix specializes in crafting high-end websites,</span>
+                    <span className="line animate-blur delay-6">mobile applications, and enterprise software</span>
+                    <span className="line animate-blur delay-7">solutions that drive growth and innovation.</span>
+                </p>
+
+
+                <div className='buttons animate-blur delay-8'>
                     <Link className='start' to="/CustomProject">Start Your Project <ChevronRight /></Link>
                     <Link className='view' to="/Catalog">View our Work</Link>
-
                 </div>
             </div>
-            <div id='Services' className='SecPage'>
-                <div className='SecIntro'>
-                    <h1>Our Expertise</h1>
-                    <p>Comprehensive tech solutions tailored to your specific industry need.</p>
-                </div>
-                <div className='exp-container'>
-                    {
-                        services.map((p) => (
-                            <Card className='card' key={p.key} Image={p.Image}
-                                Title={p.Title} Desc={p.Desc} />
-                        ))
-                    }
-                </div>
+            <div className='exp-container'>
+                {
+                    services.map((p) => (
+                        <Card className='card' key={p.key} Image={p.Image}
+                            Title={p.Title} Desc={p.Desc} />
+                    ))
+                }
             </div>
         </div>
     )

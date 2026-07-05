@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Zap } from "lucide-react";
+import { ChevronLeft, ChevronRight} from "lucide-react";
 import "./ProductCard.css";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
 
@@ -38,16 +39,17 @@ function ProductCard({ product }) {
     <motion.div whileHover={{ scale: 1.02 }} className="product-card">
       <div className="image-container">
         <AnimatePresence mode="wait">
-          <motion.img
-            key={currentIdx}
-            src={images[currentIdx]}
-            alt={product.Title}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.3 }}
-            className="main-image"
-          />
+          
+            <motion.img
+              key={currentIdx}
+              src={images[currentIdx]}
+              alt={product.Title}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+              className="main-image"
+            />
         </AnimatePresence>
 
         {images.length > 1 && (
@@ -64,31 +66,35 @@ function ProductCard({ product }) {
           </>
         )}
 
-        <div className="price-tag">${product.Price}</div>
+        {/* <div className="price-tag">${product.Price}</div> */}
       </div>
 
       <div className="content-area">
-        <div className="Tags">
-          {product.categories?.map((cat) => {
-            const color = CatColor[cat] || defaultColor;
-            return (
-              <span
-                key={cat}
-                className="Tag"
-                style={{
-                  color: color, borderColor: `${color}40`, backgroundColor: `${color}15`
-                }}
-              >
-                {cat}
-              </span>
-            );
-          })}
-        </div>
-        <h3 className="title">{product.Title}</h3>
-        <p className="description">{product.Desc}</p>
-        <button className="cta-button">
-          Try Demo <Zap size={18} />
-        </button>
+          <div className="Tags">
+            {product.categories?.map((cat) => {
+              const color = CatColor[cat] || defaultColor;
+              return (
+                <span
+                  key={cat}
+                  className="Tag"
+                  style={{
+                    color: color, borderColor: `${color}40`, backgroundColor: `${color}15`
+                  }}
+                >
+                  {cat}
+                </span>
+              );
+            })}
+          </div>
+          <div className="op-items-alignment">
+            <h3 className="title">{product.Title}</h3>
+            <h2 className="price">${product.Price}</h2>
+          </div>
+         
+          <p className="description">{product.Desc}</p>
+        <Link to={`/Catalog/${product.key}`} className="card-link">
+          <button className="cta-button">More Details</button>
+        </Link>
       </div>
     </motion.div>
   );

@@ -1,3 +1,6 @@
+.card-link{
+    text-decoration: none;
+}
 .product-card {
     border: 1px solid rgb(11, 15, 51);
     border-radius: 50px;
@@ -49,11 +52,20 @@
     border-radius: 30px;
 
 }
-
+.op-items-alignment{
+    display: flex;
+    justify-content: space-between;
+}
 .title {
-    font-size: 1.5rem;
     color: white;
     margin: 0 0 5px 0;
+}
+.price{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+
 }
 
 .description {
@@ -98,6 +110,7 @@
     padding: 0 10px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 1000;
 }
 
 .image-container:hover .carousel-nav {
@@ -143,7 +156,7 @@
     background: var(--main-color);
 }
 
-.price-tag {
+/* .price-tag {
     top: 15px;
     right: 20px;
     position: absolute;
@@ -158,4 +171,4 @@
     font-weight: bold;
     font-size: 1.2rem;
     z-index: 10;
-}
+} */

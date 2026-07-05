@@ -9,56 +9,86 @@ header {
     /*Glass bg*/
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);/* Support for Safari */
+    -webkit-backdrop-filter: blur(10px);
+    /* Support for Safari */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
     color: white;
-    cursor:default;
+    cursor: default;
+}
+.bt {
+    display: flex;
+    gap: 20px;
+}
+/*Nav bar hovering style*/
+.bt .header_nav {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    display: inline-block;
+}
+
+.bt:hover .header_nav {
+    opacity: 0.7;
+    filter: blur(1px);
+    
+}
+
+.bt .header_nav:hover {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1.05);
+   
 }
 
 .header_nav {
     color: white;
     font-size: medium;
-    padding: 10px;
-    padding-bottom: 5px;
+    padding: 15px;
     border: none;
+    border-radius: 7px;
     background: transparent;
     cursor: pointer;
     text-decoration: none;
-    position: relative; 
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 17px;
 }
 
-.header_nav::after {
-    content: "";
-    position: absolute;
-    bottom: 0; 
-    left: 10%; 
-    width: 80%; 
-    height: 3px;         
-    background-color: var(--main-color); 
-    border-radius: 10px;     
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
 .header_nav:hover::after,
 .header_nav.active::after {
-    opacity: 1;           
+    opacity: 1;
 }
 
-.bt {
+
+/* Container for the logo */
+.logo-container {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    /* Constrain the master container size */
+    height: auto;
 }
+
+/* Responsive styling for the logo image */
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Prevents stretching or distortion */
+}
+
 
 .sign-in {
     border: 1.5px solid rgb(255, 255, 255, 0.3);
     color: black;
     background-color: var(--main-color);
-    
+
 }
-.sign-in:hover{
+
+.sign-in:hover {
     background-color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);

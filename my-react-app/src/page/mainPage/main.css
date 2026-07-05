@@ -10,6 +10,7 @@
     background-attachment: fixed;
     min-height: 100vh;
     width: 100%;
+    padding-bottom: 50px;
 }
 
 .FirstPage {
@@ -99,7 +100,33 @@
     color: black;
     box-shadow: 0 10px 20px rgba(229, 255, 0, 0.2);
 }
+/* Animation */
+.animate-blur {
+  opacity: 0; 
+  animation: blurScaleUp 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
 
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
+.delay-7 { animation-delay: 1.4s; }
+.delay-8 { animation-delay: 1.6s; }
+
+@keyframes blurScaleUp {
+  0% {
+    opacity: 0;
+    filter: blur(15px);
+    transform: scale(0.9) translateY(10px); 
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1) translateY(0);
+  }
+}
 /* Second Page */
 .SecPage {
     padding: 80px 20px;
